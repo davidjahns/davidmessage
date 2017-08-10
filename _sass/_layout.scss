@@ -1,0 +1,24 @@
+$app-header-height: 40px;
+.dj-app-header {
+  position: fixed;
+  display: block;
+  height: $app-header-height;
+  line-height: $app-header-height;
+  background: rgba($white, $transparency-default);
+  text-align: center;
+  border-bottom: 1px solid $border-default;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-level-4;
+}
+
+.dj-app-header__title {
+  font-size: 1.1em;
+  font-weight: $font-weight-semibold;
+}
+
+
+.dj-app-body-container {
+  margin-top: $app-header-height;
+}

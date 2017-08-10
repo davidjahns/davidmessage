@@ -1,0 +1,82 @@
+$list-item-horizontal-padding: $horizontal-padding/3.333;
+
+.dj-list {
+  list-style: none;
+  background-color: $white;
+}
+
+.dj-list__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-default;
+  overflow: hidden;
+}
+
+.dj-list__item-title-line {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.dj-list__item-text,
+.dj-list__item-timestamp {
+  color: lighten($text-color, 25%);
+  font-size: .95em;
+}
+
+.dj-list__item-title,
+.dj-list__item-timestamp {
+  display: inline-block;
+}
+
+.dj-list__item-title {
+  font-weight: $font-weight-semibold;
+  font-size: 1.2em;
+  padding-left: $horizontal-padding;
+}
+
+.dj-list__item-text {
+  max-width: calc(100% - $list-item-horizontal-padding);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  padding-left: $horizontal-padding;
+  padding-right: $list-item-horizontal-padding;
+}
+
+.dj-list__item-timestamp {
+  text-align: right;
+  margin-right: $list-item-horizontal-padding; /* hacky due to whitespace around icon */
+  display: flex;
+  align-items: center;
+  
+  .material-icons {
+    text-align: right;
+    font-size: 1.4em;
+    margin-bottom: -1px; /* hacky due to whitespace around icon */
+    align-self: center;
+  }  
+}
+
+
+
+.dj-list__item--notification {
+  
+  .dj-list__item-title {
+    padding-left: 0;
+    
+    &:before {
+      display: inline-block;
+      content: '';
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: $link-color;
+      margin-left: $list-item-horizontal-padding;
+      margin-right: $list-item-horizontal-padding;
+    }
+  }
+}

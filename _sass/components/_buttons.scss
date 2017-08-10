@@ -1,0 +1,22 @@
+.dj-button {
+  font-weight: $font-weight-regular;
+  color: $link-color;
+  
+  .material-icons {
+    font-size: 1.2em;
+  }
+}
+
+
+.dj-button--app-top-right {
+  position: fixed;
+  top: 12px;
+  right: $horizontal-padding/3.333;
+  z-index: $z-level-5;
+}
+.dj-button--app-top-left {
+  position: fixed;
+  top: 12px;
+  left: $horizontal-padding/3.333;
+  z-index: $z-level-5;
+}
